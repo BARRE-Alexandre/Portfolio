@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projet 1</title>
+  <meta name="description" content="Portfolio de [Ton Nom], étudiant en BUT Informatique et futur game programmer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Navigation principale">
+      <a class="nav__logo" href="../index.html">BARRE Alexandre</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul class="nav__list" id="menu">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../about.html">À propos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <a class="back" href="../index.html">← Tous les projets</a>
+    <article class="project">
+      <h1>Protoype 1 (Survivor)</h1>
+      <ul class="tags"><li>Unity 6 / Windows</li><li>Solo (personnel)</li><li>2 Mois</li></ul>
+      <p>Pour mon premier prototype sur Unity, j'ai voulu créer un petit shooter en vue du dessus, avec des vagues infinies d'ennemis. J'ai réalisé ce projet pour le dernier
+        rendu de projet sur la course d'Unity. Ce petit projet m'a vraiment permis d'appliquer les points que j'avais vus durant ma course sur Unity.
+      </p>
+      <img class="project__cover" src="../assets/img/Projet1/main_game.png" alt="Capture d'écran principale du projet">
+      <div class="project__links">
+        <a class="btn" href="https://play.unity.com/en/games/ce0013aa-6812-45ac-96b1-643f454921d8/survivor" target="_blank">Jouer</a>
+        <a class="btn btn--ghost" href="https://github.com/BARRE-Alexandre/Prototype-Survivors" target="_blank">Code source</a>
+      </div>
+      <section class="section"><h2>Ce que j'ai fait</h2>
+        <p>Pour ce projet réalisé en solo, j'ai réalisé toute la partie programmation, architecture du code, les idées ainsi que l'HUD du jeu.
+          Afin de respecter les contraintes posées par la soumission du projet, j'ai du mettre en place les grands principes de la programmation orientée objet
+          sur l'entièreté du code, me donnant des contraintes techniques mais qui m'a permis de faire un code plus propre. 
+        </p>
+        <p>J'ai surtout appris à utiliser l'hérédité entre
+          mes différentes classes, surtout pour les types d'ennemis présents dans le jeu, et l'implémentation d'un mini boss. Avec ce prototype, j'ai aussi mis en pratique
+          la persistance des données en mettant un système de score dans le jeu, qui reste sauvegardé après la mort du joueur, ou si on revient sur le jeu après avoir quitté.
+        </p>
+        <p>Avec ce projet, j'ai réussi à comprendre comment utiliser un fichier Unity intégrant les controles du joueur, en m'aidant d'une vidéo youtube et en suivant
+          les instructions, puis en utilisant et modifiant ce que j'avais besoin pour mon jeu.
+        </p>
+        </section>
+      <section class="section"><h2>Les difficultés</h2>
+        <p>Durant la réalisation de ce projet, je n'ai pas eu tant de difficultés, car j'ai pu utiliser les cours d'Unity pour me guider sur comment faire les différentes
+          tâches à faire. Cependant les mouvements des ennemis m'ont posé pas mal de soucis, car j'ai modifié plusieurs fois, entre les mouvements de translations ou
+          l'application d'une force sur l'ennemi. Puisque j'ai eu plusieurs problèmes avec le tracking des ennemis qui suivaient le joueur dans les airs, ce qui 
+          enlevait l'utilité du saut pour le joueur, qui est censé l'aider à esquiver les projectiles et les ennemis.</p></section>
+      <section class="section"><h2>Conclusion</h2>
+        <p>Pour conclure ce projet, je dirais que j'ai surtout appris à réutiliser tous les savoirs que j'ai pu voir durant ma course Unity, et la réalisation
+          de ce prototype m'a fait comprendre le temps qu'il faut pour réaliser un vrai jeu indépendant en tant que dev solo. 
+        </p>
+        <p>J'ai pu rencontrer toutes les petites erreurs qu'on peut faire durant un projet où l'on met beaucoup de temps et d'énergie, 
+        avec les erreurs d'inattentions sur les différentes variables ou encore les liens que peuvent avoir les fichiers d'un même projet.
+        </p>
+       <p>Mais j'ai aussi compris avec ce projet que lorsque je me sens passionné par un projet qui me tient à coeur, je peux y mettre énormément d'heures
+        d'affilée et ne pas voir le temps passer. C'était un vrai plaisir de faire ce projet même s'il est tout petit.</p></section>
+      <section class="section"><h2>Galerie</h2>
+        <div class="gallery">
+          <img src="../assets/img/Projet1/boss.png" alt="Boss">
+          <img src="../assets/img/Projet1/ennemis.png" alt="Ennemis">
+          <img src="../assets/img/Projet1/game_Over.png" alt="Game Over">
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer container">© 2026 BARRE</footer>
+</body>
+</html>

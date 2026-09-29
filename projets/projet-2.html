@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projet 2</title>
+  <meta name="description" content="Portfolio de [Ton Nom], étudiant en BUT Informatique et futur game programmer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Navigation principale">
+      <a class="nav__logo" href="../index.html">BARRE Alexandre</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul class="nav__list" id="menu">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../about.html">À propos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <a class="back" href="../index.html">← Tous les projets</a>
+    <article class="project">
+      <h1>Sparking</h1>
+      <ul class="tags"><li>HTML/CSS - PHP - JavaScript - MySQL / Linux</li><li>Equipe (académique)</li><li>4 Mois</li></ul>
+      <p>Durant notre dernier projet de la 2ème année de BUT Informatique, nous avons développé une application
+      pour la gestion du stationnement urbain. Qui permet d'aider les utilisateurs à trouver le parking le plus proche
+      de leur position, avec différents critères possibles, en France et à Londres, sur une carte en open source du nom de Leaflet.</p>
+      <img class="project__cover" src="../assets/img/Projet2/image_principale.png" alt="Capture d'écran principale du projet">
+      <div class="project__links">
+        <a class="btn btn--ghost" href="https://github.com/BARRE-Alexandre/GestionDeParkings" target="_blank">Code source</a>
+      </div>
+      <section class="section"><h2>Ce que j'ai fait</h2>
+        <p>Pour ce projet d'équipe, j'ai pu réaliser la partie programmation en full-stack avec un collègue. Je me suis concentré
+          sur la partie back-end et notre base de données, et lui sur la partie front-end du projet. La plus grande partie de mon travail
+          a consisté à connecter différentes API publiques afin de récupérer les différentes informations sur les parkings en France et à Londres
+          et pouvoir ensuite utiliser ces informations sur notre application pour que l'utilisateur puisse accéder aux filtres des parkings.
+        </p>
+        <p>J'ai également mis en place le système de route sur notre application, pour que l'utilisateur ait un trajet entre sa position
+          et celle du parking souhaité. Avec cela j'ai ajouté la possibilité de rechercher le parking le plus proche de la position
+          de l'utilisateur, permettant à celui-ci de trouver un parking rapidement même sans connaitre la ville où il se trouve.
+          Il a aussi fallu rajouter dans les contraintes du projet, la recherche des points de mobilité proches des parkings de notre 
+          application, comme les arrets de bus les plus proches ce qui permet de rajouter un autre avantage à notre appli.
+        </p>
+        <p>Enfin, on a réalisé avec mon collègue toute l'interface à notre appli, comme la possibilité de regarder ses informations sur notre
+          profil et de pouvoir modifier son mot de passe ou email si nécessaire, ou encore que l'application soit responsive pour une utilisation
+          sur tous types d'appareils.
+        </p>
+        </section>
+      <section class="section"><h2>Les difficultés</h2>
+        <p>La grande difficulté de ce projet à été sur l'utilisation des API, c'était la première fois qu'on en utilisait
+        et il a fallu regarder de nombreuses vidéos sur le sujet et poser des questions à l'IA pour nous aider sur cette partie.
+        Mais après plusieurs soucis, comme une mauvaise utilisation des clés de l'API, des requêtes mal écrites et une organisation des
+        fichiers de requetes peu optimaux, on a réussi avec du temps à régler tous les problèmes un par un, et à correctement utiliser
+        les différentes API et à accéder aux informations des parkings.</p>
+        <p>On a aussi eu d'autres difficultés moins importantes mais quand meme très embetantes, comme avec l'affichage des arrets à proximité
+        des parkings où l'on a eu beaucoup de problèmes, qui étaient dus à des erreurs dans notre fonction avec le calcul des arrêts 
+        les plus proches et donc qui rendait l'affichage problématique, on a finalement résolu ce soucis en prenant le temps de revoir
+        tout le code, et en s'aidant de l'IA pour nous faire gagner du temps sur notre recherche.
+        </p></section>
+      <section class="section"><h2>Conclusion</h2>
+        <p>Pour conclure ce projet, celui-ci m'a énormément apporté en compréhension des API, avec l'utilisation des requetes, comment on
+          récupère les données et comment on les réutilise sur notre application afin de les afficher sur une carte. J'ai également appris
+          comment utiliser cette carte et afficher des points dessus en utilisant la documentation de la carte, ici Leaflet.
+          J'ai également pu revoir la création d'applications, l'affichage dynamique, créer et entretenir une base de données contenant
+          des données utilisateurs importantes et de nombreuses informations sur un élément précis, ici les parkings.
+        </p>
+        <p>Pour finir, j'ai revu la gestion d'un GitHub en équipe, avec des commits réguliers, une répartition des tâches entre les différents membres
+          de l'équipe et comment organiser la réalisation d'un projet sur plusieurs mois à l'aide d'outils externes.
+        </p> 
+        </section>
+      <section class="section"><h2>Galerie</h2>
+        <div class="gallery">
+          <img src="../assets/img/Projet2/inscription.png" alt="Inscription">
+          <img src="../assets/img/Projet2/trajet.png" alt="Trajet">
+          <img src="../assets/img/Projet2/support.png" alt="Page Support">
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer container">© 2026 BARRE</footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BARRE Alexandre - Portfolio</title>
+  <meta name="description" content="Portfolio de [Ton Nom], étudiant en BUT Informatique et futur game programmer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Navigation principale">
+      <a class="nav__logo" href="index.html">BARRE Alexandre</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul class="nav__list" id="menu">
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <h1>Bienvenue sur mon portfolio<span class="hero__cursor" aria-hidden="true"></span></h1>
+      <p>Étudiant en 3e année de BUT Informatique, je recherche un stage de fin d'étude en développement web, d'applications ou dans les jeux vidéo.</p>
+      <div class="actions">
+        <a class="btn" href="contact.html">Me contacter</a>
+      </div>
+    </section>
+
+    <section class="section" id="projets">
+      <h2>Mes projets</h2>
+      <div class="grid">
+        <a class="card" href="projets/projet-1.html">
+          <img class="card__img" src="assets/img//Projet1/menu.png" alt="Aperçu de Projet 1">
+          <div class="card__body">
+            <ul class="tags"><li>Unity</li><li>C#</li></ul>
+            <h3>Protoype 1 (Survivor)</h3>
+            <p>Mon premier prototype complet sur Unity, avec des améliorations possibles dans le futur.</p>
+          </div>
+        </a>
+        <a class="card" href="projets/projet-2.html">
+          <img class="card__img" src="assets/img//Projet2/sparking_Couverture.png" alt="Aperçu de Projet 2">
+          <div class="card__body">
+            <ul class="tags"><li>Php</li><li>MySQL</li><li>JavaScript</li><li>HTML/CSS</li></ul>
+            <h3>Sparking</h3>
+            <p>Une application pour le stationnement urbain.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer container">© 2026 BARRE</footer>
+</body>
+</html>

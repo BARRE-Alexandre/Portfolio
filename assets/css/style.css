@@ -1,0 +1,96 @@
+/* 1. Variables ----------------------------------------------------------- */
+:root {
+  --bg: #fff1cf;        /* crème */
+  --surface: #ffffff;
+  --ink: #1d1b2f;       /* texte, bordures, ombres */
+  --ink-muted: #56536e;
+  --primary: #2f5bea;   /* bleu : boutons, liens */
+  --yellow: #ffd23f;    /* surlignage, tags */
+  --font: "Bricolage Grotesque", system-ui, sans-serif;
+  --border: 3px solid var(--ink);
+  --radius: 14px;
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-small: 3px 3px 0 var(--ink);
+}
+
+/* 2. Base ---------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+  background: var(--bg); color: var(--ink);
+  font: 1.0625rem/1.65 var(--font);
+}
+h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 .6em; font-weight: 800; }
+h1 { font-size: clamp(2.3rem, 6.5vw, 4rem); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
+h3 { font-size: 1.3rem; }
+p { margin: 0 0 1em; max-width: 65ch; }
+a { color: var(--primary); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+a:hover { color: var(--primary); }
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+
+/* 3. Layout -------------------------------------------------------------- */
+.container { width: min(100% - 2.5rem, 62rem); margin-inline: auto; }
+main { flex: 1; padding-block: 3rem 4rem; }
+.section { margin-top: 3.5rem; }
+.site-footer { padding-block: 1.5rem; color: var(--ink-muted); font-size: .9rem; }
+
+/* 4. Navigation ---------------------------------------------------------- */
+.site-header { border-bottom: var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding-block: 1rem; }
+.nav__logo { font-weight: 800; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+.nav__list { display: flex; gap: .5rem; list-style: none; margin: 0; padding: 0; }
+.nav__list a { display: block; padding: .3rem .8rem; color: var(--ink); text-decoration: none; font-weight: 600; border-radius: 999px; }
+.nav__list a:hover { background: var(--bg); }
+.nav__list a[aria-current="page"] { background: var(--yellow); box-shadow: inset 0 0 0 2px var(--ink); }
+.nav__toggle { display: none; background: var(--yellow); border: var(--border); border-radius: var(--radius); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; padding: .3rem .9rem; }
+
+/* 5. Composants ---------------------------------------------------------- */
+.hero { padding-block: 2rem 1rem; }
+.hero__cursor { display: inline-block; width: .45em; height: .85em; background: var(--primary); margin-left: .12em; border: 3px solid var(--ink); animation: blink 1.1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.hero p { font-size: 1.25rem; color: var(--ink-muted); }
+
+.btn { display: inline-block; padding: .7rem 1.4rem; background: var(--primary); color: #fff; font-weight: 700; text-decoration: none; border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow-small); transition: transform .1s, box-shadow .1s; }
+.btn:hover { background: var(--primary); color: #fff; transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
+.btn--ghost { background: var(--surface); color: var(--ink); }
+.btn--ghost:hover { background: var(--surface); color: var(--ink); }
+.actions { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.75rem; }
+
+.grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+.card { display: flex; flex-direction: column; background: var(--surface); color: var(--ink); text-decoration: none; border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: transform .1s, box-shadow .1s; }
+.card:hover { color: var(--ink); transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--ink); }
+.card__img { aspect-ratio: 16 / 9; width: 100%; object-fit: cover; border-bottom: var(--border); }
+.card__body { padding: 1.25rem 1.5rem 1.5rem; }
+.card__body p { color: var(--ink-muted); margin: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: 0 0 1rem; }
+.tags li { background: var(--yellow); color: var(--ink); padding: .1rem .75rem; font-size: .85rem; font-weight: 600; border: 2px solid var(--ink); border-radius: 999px; }
+
+.contact-list { list-style: none; padding: 0; display: grid; gap: 1.25rem; max-width: 30rem; }
+.contact-list a { display: block; padding: 1rem 1.5rem; background: var(--surface); color: var(--ink); font-weight: 700; text-decoration: none; border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow-small); transition: transform .1s, box-shadow .1s; }
+.contact-list a:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
+.contact-list span { display: block; color: var(--ink-muted); font-size: .9rem; font-weight: 500; }
+
+/* 6. Pages projet -------------------------------------------------------- */
+.project__cover { width: 100%; height: auto; margin-block: 1.5rem; border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+.project__links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.gallery { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.25rem; }
+.gallery img { height: 22rem; width: auto; max-width: 100%; border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow-small); }
+.back:hover { text-decoration: underline; }
+
+/* 7. Responsive ---------------------------------------------------------- */
+@media (max-width: 640px) {
+  :root { --shadow: 4px 4px 0 var(--ink); }
+  .nav__toggle { display: block; }
+  .nav__list { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: var(--surface); border-bottom: var(--border); padding: .5rem 1.25rem 1rem; }
+  .nav__list.is-open { display: flex; }
+  main { padding-block: 2rem 3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero__cursor { animation: none; }
+  .btn, .card, .contact-list a { transition: none; }
+}
